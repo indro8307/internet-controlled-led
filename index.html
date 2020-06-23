@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<body style="background-color:powderblue;">
+
+<button class="button" onclick="ledon()">led on</button>
+<button class="button" onclick="ledoff()">led off</button>
+
+<!-- This is replace the api_key value with the write api key -->
+<script>
+function ledon() {
+   fetch("https://api.thingspeak.com/update?api_key=ABCDEFGHIJKL&field1=1")  
+}
+</script>
+
+<!-- This is replace the api_key value with the write api key -->
+<script>
+function ledoff() {
+   fetch("https://api.thingspeak.com/update?api_key=ABCDEFGHIJKL&field1=0")
+}
+</script>
+
+</body>
+</html>
